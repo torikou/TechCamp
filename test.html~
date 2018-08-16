@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <title>
+    <p class="title">このサイトは,テストです</p>
+  </title>
+</head>
+  <body>
+    Hello, world!
+  </body>
+</html>

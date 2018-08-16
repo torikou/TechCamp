@@ -1,0 +1,4 @@
+hash1 = {"title" => "yeah"}
+hash2 = {:title => "yeah"}
+puts hash1
+puts hash2
