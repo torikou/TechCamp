@@ -1,125 +1,72 @@
-body, html {
-  height: 100%;
-  background-color: #ddd;
-}
-
-h1, h2, h3, h4, h5, h6, p, body {
-  font-size: 14px;
-  color: #4a4a4a;
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.clearfix:after{
-  display: block;
-  content: "";
-  clear: both;
-}
-
-.wrapper{
-  min-width: 960px;
-  }
-
-header{
-  height: 46px;
-  background-color: white;
-  /*border-bottom: 2px solid #bbb;*/
-}
-
-h1{
-  height: 46px;
-  line-height: 46px;
-  font-size: 18px;
-  text-align: center;
-}
-
-h2{
-  height: 40px;
-  line-height: 40px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.contents{
-  height: 100%;
-  width: 600px;
-  margin: 5px auto 0;
-  background-color: white;
-}
-
-form{
-  width: 600px;
-  background-color: white;
-  padding: 5px 0 0;
-}
-
-.input-box{
-  float: left;
-  width: 500px;
-}
-
-.input-box input{
-  width: 100%;
-  margin: 0 0 10px 0;
-}
-
-form img{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  float: left;
-  height: 24px;
-  margin: 0 5px 5px 34px;
-}
-
-.submit-button{
-  width: 70px;
-  margin: 10px 25px 0 0;
-}
-
-form textarea{
-  width: 500px;
-  border: 1px solid #ccc;
-}
-
-.button-box{
-  float: right;
-  height: 70px;
-}
-
-.message{
-  min-height: 100px;
-  width: 598px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid #bbb;
-  border-bottom: none;
-}
-
-.message img{
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  float: left;
-  height: 48px;
-  margin: 10px;
-}
-
-.message_box{
-  float: left;
-  height: 100px;
-  width: 505px;
-  padding: 9px 0 10px;
-}
-
-.user_name{
-  font-weight: bold;
-  line-height: 18px;
-}
-
-.time{
-  color: #bbb;
-}
-
-.text{
-  line-height: 18px;
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ねこったー</title>
+  </head>
+  <body>
+    <header>
+      <h1>ねこったー</h1>
+    </header>
+    <div class="contents">
+<!--        <form class="clearfix">
+        <img src="images/cat1.png">
+        <textarea rows="4" cols="40"></textarea>
+        <div class="button-box">
+          <input type="submit">
+        </div>
+      </form> -->
+      <% @tweets.each do |tweet| %>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+          <p class="user_name">
+            野良猫1号
+            <!-- <span class="time">・8月13日</span> -->
+          <p>
+          <p class="text">
+	    <%= simple_format(tweet.text) %>
+          </p>
+        </div>
+      </div>
+      <% end %>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+          <p class="user_name">たま
+            <!-- <span class="time">・8月13日</span> -->
+          <p>
+          <p class="text">
+            家宝は寝て待てにゃー。急がば回れにゃー。蓼食う虫も好き好きにゃー。一念岩をも通すにゃー。千石取れば万石羨むにゃー。
+          <p>
+        </div>
+      </div>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+        </div>
+      </div>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+        </div>
+      </div>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+        </div>
+      </div>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+        </div>
+      </div>
+      <div class="message clearfix">
+	<%= image_tag 'cat1.png' %>
+        <div class="message_box">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
