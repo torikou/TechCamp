@@ -1,0 +1,15 @@
+ <header>
+  <h1>ねこったー</h1>
+ </header>
+ <div class="contents">
+   <h2>投稿する</h2>
+     <form class="clearfix">
+       <img src="/assets/cat1.png">
+       <div class="input-box">
+         <textarea rows="4" cols="40">今日も疲れたにゃー</textarea>
+       </div>
+       <div class="button-box">
+         <input type="submit" class="submit-button">
+       </div>
+     </form>
+ </div>
